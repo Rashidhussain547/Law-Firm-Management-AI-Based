@@ -1,0 +1,308 @@
+.settings-container {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 24px;
+  padding: 28px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.settings-sidebar {
+  height: fit-content;
+  overflow: hidden;
+}
+
+.settings-sidebar-header {
+  padding: 22px;
+}
+
+.settings-sidebar-title {
+  font-weight: 700 !important;
+}
+
+.settings-sidebar-subtitle {
+  margin-top: 4px !important;
+}
+
+.settings-nav {
+  padding: 10px;
+}
+
+.settings-nav-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 0;
+  background: transparent;
+  padding: 12px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  color: inherit;
+  margin-bottom: 4px;
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease;
+}
+
+.settings-nav-item:hover {
+  background: rgba(var(--color-indigo-600-rgb), 0.08);
+}
+
+.settings-nav-item.active {
+  background: rgba(var(--color-indigo-600-rgb), 0.12);
+  color: var(--color-indigo-600);
+  font-weight: 600;
+}
+
+.settings-content {
+  min-width: 0;
+}
+
+.settings-panel {
+  min-height: 520px;
+}
+
+.settings-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.settings-divider {
+  margin: 24px 0 !important;
+}
+
+.settings-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.settings-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 28px;
+}
+
+.settings-password-form {
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.appearance-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 760px;
+}
+
+.appearance-option {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid;
+  border-color: var(--color-gray-200);
+  border-radius: 12px;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color 0.18s ease,
+    background-color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.appearance-option:hover {
+  transform: translateY(-1px);
+}
+
+.appearance-option.selected {
+  border-color: var(--color-indigo-600);
+  background: rgba(var(--color-indigo-600-rgb), 0.06);
+}
+
+.team-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.team-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 12px;
+  transition:
+    background-color 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.team-member:hover {
+  background: rgba(var(--color-indigo-600-rgb), 0.025);
+}
+
+.team-member-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.team-avatar {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(var(--color-indigo-600-rgb), 0.1);
+  color: var(--color-indigo-600);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.team-member-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.role-chip {
+  font-weight: 600 !important;
+}
+
+.role-lawyer {
+  color: var(--color-indigo-600) !important;
+}
+
+.role-assistant {
+  color: var(--color-sky-600) !important;
+}
+
+.team-empty {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.create-user-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  background: var(--color-overlay);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+}
+.MuiPopover-root,
+.MuiMenu-root {
+  z-index: 1300 !important;
+}
+
+.create-user-dialog {
+  width: 100%;
+  max-width: 620px;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+}
+
+.create-user-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 22px;
+}
+
+.create-user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 22px;
+}
+
+.create-user-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.create-user-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 16px 22px;
+}
+
+@media (max-width: 900px) {
+  .settings-container {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4px;
+  }
+
+  .settings-nav-item {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .settings-container {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .settings-form-grid,
+  .appearance-options,
+  .create-user-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-header,
+  .team-member {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .team-member {
+    gap: 14px;
+  }
+
+  .team-member-meta {
+    padding-left: 56px;
+  }
+
+  .settings-nav {
+    grid-template-columns: 1fr;
+  }
+}
